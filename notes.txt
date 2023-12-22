@@ -1,0 +1,2 @@
+LLM - Large Language Model - Algorithm that generates some amount of text (Palm, BLOOM, gpt 3, LLaMA, GLM, Alpaca, OPT, Camel)
+Most follows a completion style of text generation, some have adjusted to use a conversational style of generation (gpt, bard, claude)
