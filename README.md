@@ -39,7 +39,7 @@ The result of loading file is a Document that contains the content (page_content
 <img src="docs/img/files.png" alt="files" width="600" height="600">
 </p>
 
-# Document Retrievers
+## Document Retrievers
 
 Vector store is a database that is specialized in storing and searching embeddings.
 
@@ -48,3 +48,9 @@ Vector store is a database that is specialized in storing and searching embeddin
 </p>
 
 ChromaDB is an open source vector store that uses SQLite as a backend. It is a good choice for small projects.
+
+## Working with functions
+
+Agent is a chain that knows how to use Tools. Tools are functions that can be used by the chain to do some work.
+Agents will take the list of tools and convert them into JSON functions descriptions. Still has all the normal things that a chain has like memories, loaders, etc.
+Agent executor takes an agent and runs it until the response is not a function call (a fancy while loop)
