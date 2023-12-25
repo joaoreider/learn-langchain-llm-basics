@@ -54,3 +54,4 @@ ChromaDB is an open source vector store that uses SQLite as a backend. It is a g
 Agent is a chain that knows how to use Tools. Tools are functions that can be used by the chain to do some work.
 Agents will take the list of tools and convert them into JSON functions descriptions. Still has all the normal things that a chain has like memories, loaders, etc.
 Agent executor takes an agent and runs it until the response is not a function call (a fancy while loop)
+Agent scratchpad is a place to store variables that are used by the agent.
