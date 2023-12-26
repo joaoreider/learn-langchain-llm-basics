@@ -20,15 +20,13 @@ def list():
 @login_required
 @handle_file_upload
 def upload_file(file_id, file_path, file_name):
-    print("File path: ", file_path)
     res, status_code = files.upload(file_path)
     if status_code >= 400:
         return res, status_code
 
     pdf = Pdf.create(id=file_id, name=file_name, user_id=g.user.id)
 
-    # TODO: Defer this to be processed by the worker
-    process_document(pdf.id)
+    process_document.delay(pdf.id)
 
     return pdf.as_dict()
 
