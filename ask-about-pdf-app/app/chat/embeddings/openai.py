@@ -2,5 +2,5 @@ from langchain.embeddings import OpenAIEmbeddings
 import os
 
 embeddings = OpenAIEmbeddings(
-  base_url= "http://llm.igmify.com:8080",
+  openai_api_base= "http://llm.igmify.com:8080",
 )
